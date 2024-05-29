@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc -p src",
-    "postinstall": "npx tsc -p src"
+    "postinstall": "npx tsc -p src",
+    "build:types": "tsc --emitDeclarationOnly"
   },
   "keywords": [
     "GooseFX",
