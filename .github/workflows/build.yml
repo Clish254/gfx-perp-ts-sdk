@@ -3,8 +3,8 @@ name: Build and Release
 on:
   push:
     branches:
-      - wasm-comment-maintaince-repo
       - wasm-commented-events
+      - build-GA
 
 jobs:
   build:
@@ -37,8 +37,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: "v1.2.1"
-          release_name: "v1.2.1"
+          tag_name: ${{ github.run_number }}
+          release_name: Release ${{ github.run_number }}
           draft: false
           prerelease: false
 
