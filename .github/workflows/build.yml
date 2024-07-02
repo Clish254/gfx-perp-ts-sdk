@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - wasm-commented-events
-      - build-GA
 
 jobs:
   build:
